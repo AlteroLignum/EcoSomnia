@@ -6,6 +6,7 @@ import Testimonials from '@/widgets/testimonials/Testimonials';
 import CustomerSupport from '@/widgets/customer-support/CustomerSupport';
 import Guides from '@/widgets/guides/Guides';
 import GetStarted from '@/features/get-started/GetStarted';
+import Information from '@/widgets/information/Information';
 import Footer from '@/widgets/footer/Footer';
 
 const HomePage = () => {
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Guides />
       <GetStarted />
       <StatsCarousel/>
+      <Information />
       <Footer />
     </>
   );
