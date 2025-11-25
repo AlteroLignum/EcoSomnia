@@ -19,6 +19,7 @@ const HomePage = () => {
       <CustomerSupport />
       <Guides />
       <GetStarted />
+      <StatsCarousel/>
       <Footer />
     </>
   );
