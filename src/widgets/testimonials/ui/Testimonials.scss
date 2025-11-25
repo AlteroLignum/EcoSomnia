@@ -1,0 +1,153 @@
+.testimonials {
+  padding: 5rem 2rem 4rem;
+  background-color: #1e293b; // Dark blue background
+  position: relative;
+  border-radius: 2rem 2rem 0 0; // Rounded top corners
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__tab {
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: var(--font-inter);
+
+    &--active {
+      background-color: #4f46e5; // Indigo background for active tab
+      color: white;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  &__card {
+    background: #334155;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    color: white;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__quote {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-family: var(--font-inter);
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-family: var(--font-inter);
+  }
+
+  &__author-title {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    font-family: var(--font-inter);
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .testimonials {
+    padding: 4rem 1rem 3rem;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    &__tabs {
+      gap: 0.75rem;
+    }
+
+    &__tab {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__tab {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}

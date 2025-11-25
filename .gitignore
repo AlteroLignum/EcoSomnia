@@ -13,6 +13,12 @@
 # testing
 /coverage
 
+# AI context files — local only, not for Git
+.ai/
+QWEN.md
+CURRENT_CONTEXT.md
+PROJECT_STRUCTURE.md
+
 # next.js
 /.next/
 /out/

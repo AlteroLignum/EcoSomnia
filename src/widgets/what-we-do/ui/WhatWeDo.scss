@@ -1,0 +1,81 @@
+.what-we-do {
+  padding: 4rem 2rem;
+  background-color: white;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 3rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+
+  &__card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    font-family: var(--font-inter);
+  }
+}
+
+// Responsive design
+@media (max-width: 1200px) {
+  .what-we-do {
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .what-we-do {
+    padding: 3rem 1rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .what-we-do {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

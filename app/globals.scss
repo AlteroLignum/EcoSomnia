@@ -1,0 +1,30 @@
+@import '@/shared/styles/base.scss';
+@import '@/shared/styles/typography.scss';
+@import '@/shared/styles/components.scss';
+
+// Import all component styles globally
+@import '@/widgets/header/ui/Header.scss';
+@import '@/widgets/hero/ui/Hero.scss';
+@import '@/widgets/hero-slider/ui/HeroSlider.scss';
+@import '@/widgets/brand-carousel/ui/BrandCarousel.scss';
+@import '@/widgets/customer-logos/ui/CustomerLogos.scss';
+@import '@/widgets/what-we-do/ui/WhatWeDo.scss';
+@import '@/widgets/stats-carousel/ui/StatsCarousel.scss';
+@import '@/widgets/feature-blocks/ui/FeatureBlocks.scss';
+@import '@/widgets/testimonials/ui/Testimonials.scss';
+@import '@/widgets/customer-support/ui/CustomerSupport.scss';
+@import '@/widgets/guides/ui/Guides.scss';
+@import '@/features/get-started/ui/GetStarted.scss';
+@import '@/widgets/footer/ui/Footer.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}

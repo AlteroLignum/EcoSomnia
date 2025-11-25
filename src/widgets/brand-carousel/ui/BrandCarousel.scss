@@ -1,0 +1,62 @@
+.brand-carousel {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  &__container {
+    display: flex;
+    width: 200%; /* Double width to hold cloned logos */
+    min-width: 200%;
+
+    & > .brand-carousel__item {
+      flex: 0 0 auto;
+      margin: 0 2rem;
+      min-width: 200px; /* Increased width */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; /* Increased height */
+    min-height: 60px; /* Ensure minimum size */
+    min-width: 120px; /* Ensure minimum width */
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    background: transparent; // Ensure transparent background
+    padding: 0; // Ensure no padding creates background space
+    border: none; // Ensure no border
+
+    &:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}
+
+/* Animation for continuous scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

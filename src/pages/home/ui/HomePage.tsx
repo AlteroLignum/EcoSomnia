@@ -1,18 +1,21 @@
-import Hero from '@/widgets/hero/Hero';
-import WhatWeDo from '@/widgets/what-we-do/WhatWeDo';
-import StatsCarousel from '@/widgets/stats-carousel/StatsCarousel';
-import FeatureBlocks from '@/widgets/feature-blocks/FeatureBlocks';
-import Testimonials from '@/widgets/testimonials/Testimonials';
-import CustomerSupport from '@/widgets/customer-support/CustomerSupport';
-import Guides from '@/widgets/guides/Guides';
-import GetStarted from '@/features/get-started/GetStarted';
-import Information from '@/widgets/information/Information';
-import Footer from '@/widgets/footer/Footer';
+import Header from '@/widgets/header';
+import Hero from '@/widgets/hero';
+import CustomerLogos from '@/widgets/customer-logos';
+import WhatWeDo from '@/widgets/what-we-do';
+import StatsCarousel from '@/widgets/stats-carousel';
+import FeatureBlocks from '@/widgets/feature-blocks';
+import Testimonials from '@/widgets/testimonials';
+import CustomerSupport from '@/widgets/customer-support';
+import Guides from '@/widgets/guides';
+import GetStarted from '@/features/get-started';
+import Footer from '@/widgets/footer';
 
 const HomePage = () => {
   return (
     <>
+      <Header />
       <Hero />
+      <CustomerLogos />
       <WhatWeDo />
       <StatsCarousel />
       <FeatureBlocks />
@@ -20,8 +23,6 @@ const HomePage = () => {
       <CustomerSupport />
       <Guides />
       <GetStarted />
-      <StatsCarousel/>
-      <Information />
       <Footer />
     </>
   );

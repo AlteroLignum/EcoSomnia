@@ -1,0 +1,133 @@
+.customer-support {
+  padding: 5rem 2rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-inter);
+  }
+
+  &__chat {
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    padding: 2rem;
+  }
+
+  &__chat-bubble {
+    padding: 1rem 1.25rem;
+    border-radius: 1.5rem;
+    max-width: 80%;
+    margin-bottom: 1rem;
+    position: relative;
+    font-family: var(--font-inter);
+
+    &--question {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      align-self: flex-start;
+      margin-left: 0;
+    }
+
+    &--answer {
+      background-color: #f0f9ff;
+      color: #0264a8;
+      align-self: flex-end;
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+
+  &__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__agent {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    background-color: #e0f2f1;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #00695c;
+    font-family: var(--font-inter);
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .customer-support {
+    padding: 4rem 1rem;
+
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    &__content {
+      order: 2;
+    }
+
+    &__image {
+      order: 1;
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__chat {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-support {
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__text {
+      font-size: 1rem;
+    }
+
+    &__chat-bubble {
+      max-width: 90%;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}

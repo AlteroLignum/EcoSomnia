@@ -1,0 +1,172 @@
+.stats-carousel {
+  padding: 4rem 2rem;
+  background-color: #f9fafb;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 3rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__item {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e91e63;
+    margin-bottom: 1rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__label {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.5;
+    font-family: var(--font-inter);
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  &__nav-btn {
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f3f4f6;
+    }
+
+    &--prev {
+      order: 1;
+    }
+
+    &--next {
+      order: 3;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    gap: 0.5rem;
+    order: 2;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d1d5db;
+    cursor: pointer;
+
+    &--active {
+      background-color: #e91e63;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .stats-carousel {
+    padding: 3rem 1rem;
+
+    &__items {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__item {
+      min-width: 250px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-carousel {
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__items {
+      gap: 1.5rem;
+    }
+
+    &__value {
+      font-size: 2.5rem;
+    }
+
+    &__nav-btn {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-carousel {
+    &__items {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    &__navigation {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__nav-btn {
+      &--prev,
+      &--next {
+        order: 0;
+      }
+    }
+
+    &__dots {
+      order: 1;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.hero {
+  background-color: #e0f2f1; // Light mint green
+  padding: 10rem 2rem 6rem;
+  position: relative;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+
+  &__content {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  &__tag {
+    background-color: #b2dfdb;
+    color: #00695c;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-inter);
+  }
+
+  &__headline {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__subtext {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-family: var(--font-inter);
+  }
+
+  &__demo-button {
+    background-color: #e91e63; // Pink background
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    font-family: var(--font-inter);
+
+    &:hover {
+      background-color: #d81b60;
+    }
+  }
+
+  &__stat-text {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-inter);
+  }
+
+  &__customer-link {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    font-family: var(--font-inter);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .hero {
+    padding: 8rem 2rem 4rem;
+
+    &__container {
+      gap: 2rem;
+    }
+
+    &__headline {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1rem 2rem;
+
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__content {
+      padding-right: 0;
+      order: 2;
+    }
+
+    &__image-container {
+      order: 1;
+      margin-bottom: 2rem;
+    }
+
+    &__headline {
+      font-size: 2rem;
+    }
+
+    &__subtext {
+      font-size: 1.125rem;
+    }
+
+    &__demo-button {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 2rem;
+    }
+
+    &__customer-link {
+      display: block;
+    }
+  }
+}

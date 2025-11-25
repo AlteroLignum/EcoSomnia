@@ -1,7 +1,7 @@
 import HomePage from './ui/HomePage';
 
 export const metadata = {
-  title: 'Mews — Hospitality Management System',
+  title: 'EcoSomnia — Hospitality Management System',
   description: 'Simplify operations. Elevate experiences. Grow your revenue.',
 };
 

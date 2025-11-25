@@ -1,0 +1,138 @@
+.feature-blocks {
+  padding: 5rem 2rem;
+  background-color: white;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__number {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    background-color: #e91e63;
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    z-index: 1;
+    font-family: var(--font-manrope);
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__item-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    font-family: var(--font-inter);
+  }
+
+  &__item-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+    font-family: var(--font-inter);
+  }
+
+  &__image {
+    flex: 0 0 200px;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: #f9fafb;
+    border-radius: 1rem;
+  }
+
+  &:nth-child(even) {
+    & .feature-blocks__item {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .feature-blocks {
+    padding: 4rem 1rem;
+
+    &__item {
+      flex-direction: column !important;
+      text-align: center;
+    }
+
+    &__number {
+      position: static;
+      order: -1;
+    }
+
+    &__content {
+      order: 1;
+    }
+
+    &__image {
+      order: 2;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    &__item-title {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-blocks {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__item {
+      gap: 1.5rem;
+    }
+
+    &__item-description {
+      font-size: 1rem;
+    }
+
+    &__image {
+      height: 150px;
+      font-size: 3rem;
+    }
+  }
+}

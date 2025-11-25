@@ -1,0 +1,88 @@
+.guides {
+  padding: 5rem 2rem;
+  background-color: white;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 3rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  &__card {
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+  }
+
+  &__icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    font-family: var(--font-inter);
+  }
+
+  &__card-description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-inter);
+  }
+
+  &__link {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    font-family: var(--font-inter);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .guides {
+    padding: 4rem 1rem;
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .guides {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

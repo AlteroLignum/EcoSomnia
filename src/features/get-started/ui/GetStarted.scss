@@ -1,0 +1,152 @@
+.get-started {
+  padding: 5rem 2rem;
+  background-color: #e0f2f1; // Light mint green background
+  display: flex;
+  align-items: center;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__tablet {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-size: 1.25rem;
+    color: #00695c;
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--font-inter);
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-manrope);
+  }
+
+  &__steps {
+    margin-bottom: 2.5rem;
+  }
+
+  &__step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+  }
+
+  &__step-number {
+    background-color: #00695c;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-family: var(--font-manrope);
+  }
+
+  &__step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-inter);
+  }
+
+  &__step-description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+    font-family: var(--font-inter);
+  }
+
+  &__button {
+    background-color: #e91e63; // Pink background
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-inter);
+
+    &:hover {
+      background-color: #d81b60;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .get-started {
+    padding: 4rem 1rem;
+
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    &__content {
+      order: 2;
+    }
+
+    &__image {
+      order: 1;
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .get-started {
+    &__container {
+      gap: 1.5rem;
+    }
+
+    &__tablet {
+      max-width: 300px;
+      height: 400px;
+      font-size: 1rem;
+    }
+
+    &__step {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+  }
+}

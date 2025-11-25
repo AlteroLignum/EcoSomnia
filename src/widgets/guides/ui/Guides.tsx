@@ -1,0 +1,41 @@
+import './Guides.scss';
+
+const Guides = () => {
+  const guides = [
+    {
+      title: '10 способов управления нехваткой персонала',
+      description: 'Узнайте, как оптимизировать процессы и сократить зависимость от персонала с помощью технологий.',
+      icon: '📚'
+    },
+    {
+      title: 'Как диверсифицировать доходы вашего отеля',
+      description: 'Стратегии увеличения доходов за пределами размещения с помощью дополнительных услуг.',
+      icon: '💡'
+    },
+    {
+      title: 'Руководство по смене PMS для отельеров',
+      description: 'Пошаговое руководство по выбору и внедрению новой системы управления гостиницей.',
+      icon: '📖'
+    }
+  ];
+
+  return (
+    <section className="guides">
+      <div className="guides__container">
+        <h2 className="guides__title">Узнайте больше с EcoSomnia</h2>
+        <div className="guides__cards">
+          {guides.map((guide, index) => (
+            <div key={index} className="guides__card">
+              <div className="guides__icon">{guide.icon}</div>
+              <h3 className="guides__card-title">{guide.title}</h3>
+              <p className="guides__card-description">{guide.description}</p>
+              <a href="#" className="guides__link">Читать далее →</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Guides;

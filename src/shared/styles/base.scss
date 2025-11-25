@@ -1,0 +1,9 @@
+:root {
+  --font-inter: '__Inter_4e2aaf', '__Inter_Fallback_4e2aaf';
+  --font-manrope: '__Manrope_b7e1bd', '__Manrope_Fallback_b7e1bd';
+}
+
+body {
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
