@@ -1,4 +1,5 @@
 import './CustomerSupport.scss';
+import Image from 'next/image';
 
 const CustomerSupport = () => {
   return (
@@ -11,7 +12,7 @@ const CustomerSupport = () => {
           </p>
           <div className="customer-support__chat">
             <div className="customer-support__chat-bubble customer-support__chat-bubble--question">
-              Могу ли я предложить завтрак при заезде?
+              Могу ли я рассчитывать на завтрак при заезде?
             </div>
             <div className="customer-support__chat-bubble customer-support__chat-bubble--answer">
               Конечно! Подробнее об этом можно прочитать здесь →
@@ -19,8 +20,13 @@ const CustomerSupport = () => {
           </div>
         </div>
         <div className="customer-support__image">
-          {/* Placeholder for support agent image */}
-          <div className="customer-support__agent">Сотрудник поддержки</div>
+          <Image
+            src="/images/customersupport/customer_support.webp"
+            alt="Сотрудник поддержки"
+            width={380}
+            height={420}
+            className="customer-support__agent-image"
+          />
         </div>
       </div>
     </section>

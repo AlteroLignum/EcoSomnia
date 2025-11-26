@@ -5,6 +5,7 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
@@ -14,6 +15,9 @@
   &__content {
     flex: 1;
     padding-right: 2rem;
+  }
+  &__main-section{
+    display: flex;
   }
 
   &__tag {
@@ -79,12 +83,6 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-
-  &__image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
   }
 }
 

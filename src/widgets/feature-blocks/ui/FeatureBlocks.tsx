@@ -1,46 +1,61 @@
 import './FeatureBlocks.scss';
+import { featureBlocksData } from '@/shared/data/featureblocks';
+import Image from 'next/image';
+
+// Mapping of icon names to actual icons
+const getIcon = (iconName: string) => {
+  const iconMap: Record<string, string> = {
+    'refresh': '🔄',
+    'lock': '🔒',
+    'device': '📱',
+    'calendar': '📅',
+    'car': '🚗',
+    'chart': '📊',
+    'hand': '✋',
+    'gear': '⚙️',
+    'grid': '🌐',
+    'payment': '💳',
+    'shield': '🛡️',
+    'sync': '🔄',
+  };
+
+  return iconMap[iconName] || '❓'; // Default to question mark if icon not found
+};
 
 const FeatureBlocks = () => {
-  const features = [
-    {
-      number: '01',
-      title: 'Облачные технологии (не просто облачное решение)',
-      description: 'Наша система полностью облачная, что означает мгновенные обновления, масштабируемость и надежность без необходимости в дорогостоящем оборудовании.',
-      image: '🧩'
-    },
-    {
-      number: '02',
-      title: 'Больше возможностей для диверсификации доходов',
-      description: 'Расширьте возможности заработка за пределами размещения. Управляйте ресторанами, спа-салонами, мероприятиями и другими услугами через одну интегрированную платформу.',
-      image: '💰'
-    },
-    {
-      number: '03',
-      title: 'Простота изучения. Интуитивная простота использования.',
-      description: 'Наши интерфейсы интуитивно понятны и просты в использовании, что сокращает время обучения и повышает эффективность вашей команды.',
-      image: '🧠'
-    },
-    {
-      number: '04',
-      title: 'Встроенные платежи: удобные, безопасные, надежные',
-      description: 'Обеспечьте безопасные транзакции с нашими встроенными платежными решениями, которые соответствуют всем требованиям безопасности PCI.',
-      image: '💳'
-    }
-  ];
-
   return (
     <section className="feature-blocks">
       <div className="feature-blocks__container">
         <h2 className="feature-blocks__title">Почему отельеры выбирают EcoSomnia</h2>
         <div className="feature-blocks__list">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-blocks__item">
-              <div className="feature-blocks__number">{feature.number}</div>
+          {featureBlocksData.map((feature, index) => (
+            <div
+              key={feature.id}
+              className={`feature-blocks__item feature-blocks__item--${index % 2 === 0 ? 'even' : 'odd'}`}
+              style={{ backgroundColor: feature.backgroundColor }}
+            >
+              <div className="feature-blocks__number">0{feature.id}</div>
               <div className="feature-blocks__content">
                 <h3 className="feature-blocks__item-title">{feature.title}</h3>
                 <p className="feature-blocks__item-description">{feature.description}</p>
+                <ul className="feature-blocks__benefits">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="feature-blocks__benefit">
+                      <span className="feature-blocks__benefit-icon">{getIcon(benefit.icon)}</span>
+                      <span className="feature-blocks__benefit-text">{benefit.text}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="feature-blocks__image">{feature.image}</div>
+              <div className="feature-blocks__image">
+                <Image
+                  src={feature.imagePath}
+                  alt={feature.altText}
+                  width={420}
+                  height={380}
+                  className="feature-blocks__image-content"
+                />
+              </div>
             </div>
           ))}
         </div>

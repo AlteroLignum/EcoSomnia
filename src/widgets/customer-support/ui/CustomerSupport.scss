@@ -68,18 +68,12 @@
     justify-content: center;
   }
 
-  &__agent {
+  &__agent-image {
     width: 100%;
-    max-width: 300px;
-    height: 400px;
-    background-color: #e0f2f1;
+    max-width: 380px;
+    height: 420px;
     border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    color: #00695c;
-    font-family: var(--font-inter);
+    object-fit: cover;
   }
 }
 

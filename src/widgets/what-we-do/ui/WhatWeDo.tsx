@@ -1,23 +1,28 @@
 import './WhatWeDo.scss';
+import { whatWeDoData } from '@/shared/data/whatwedo';
+import Image from 'next/image';
 
 const WhatWeDo = () => {
-  const options = [
-    { title: 'Отели', icon: '🏨' },
-    { title: 'Группы и сети', icon: '🏢' },
-    { title: 'Маленькие отели', icon: '🏩' },
-    { title: 'Хостелы', icon: '🛏️' },
-    { title: 'Альтернативное размещение', icon: '🏝️' }
-  ];
-
   return (
     <section className="what-we-do">
       <div className="what-we-do__container">
         <h2 className="what-we-do__title">Посмотрите, что EcoSomnia может сделать для вас</h2>
         <div className="what-we-do__cards">
-          {options.map((option, index) => (
-            <div key={index} className="what-we-do__card">
-              <div className="what-we-do__icon">{option.icon}</div>
-              <h3 className="what-we-do__card-title">{option.title}</h3>
+          {whatWeDoData.map((item) => (
+            <div key={item.id} className="what-we-do__card">
+              <div className="what-we-do__image-container">
+                <Image
+                  src={item.imagePath}
+                  alt={item.title}
+                  width={246}
+                  height={390}
+                  className="what-we-do__image"
+                />
+                <div className="what-we-do__image-overlay">
+                  <h3 className="what-we-do__card-title">{item.title}</h3>
+                  <p className="what-we-do__card-description">{item.description}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
