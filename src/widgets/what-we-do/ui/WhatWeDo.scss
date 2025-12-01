@@ -8,7 +8,7 @@
   }
 
   &__title {
-    text-align: center;
+    text-align: left; // Changed to left alignment
     font-size: 2.5rem;
     font-weight: 700;
     color: #111827;
@@ -36,10 +36,15 @@
   &__image-container {
     position: relative;
     width: 100%;
-    height: 390px;
+    height: 0;
+    padding-bottom: 157.5%; 
+    overflow: hidden;
   }
 
   &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -52,19 +57,20 @@
   }
 
   &__image-overlay {
-    position: absolute;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), hsla(0, 0%, 100%, .1);
     bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    justify-content: center;
+    min-height: 82px;
+    padding: 8px 20px;
+    position: absolute;
+    width: 100%;
     color: white;
-    padding: 1.5rem;
-    height: 82px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
+    text-align: left; 
   }
 
   &__card-title {
@@ -72,12 +78,18 @@
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-family: var(--font-inter);
-    text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.5);
     display: block;
+    text-decoration: none;
+    background-image: linear-gradient(white,);
+    background-size: 100% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
 
     .what-we-do__card:hover & {
-      text-decoration: none;
+        background-size: 0% 0.1em;
     }
   }
 
@@ -90,11 +102,11 @@
   }
 }
 
-// Responsive design
-@media (max-width: 1200px) {
+
+@media (max-width: 960px) {
   .what-we-do {
     &__cards {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -107,21 +119,26 @@
       font-size: 2rem;
     }
 
+    &__card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-inter);
+    display: block;
+    text-decoration: none;
+    background-image: none;
+    background-size: 0;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    }
+
     &__cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2,1fr)
     }
 
     &__image-overlay {
       height: auto;
       padding: 2rem 1.5rem 1.5rem;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .what-we-do {
-    &__cards {
-      grid-template-columns: 1fr;
     }
   }
 }

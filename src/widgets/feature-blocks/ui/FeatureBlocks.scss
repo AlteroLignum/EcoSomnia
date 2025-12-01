@@ -8,7 +8,7 @@
   }
 
   &__title {
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
     font-weight: 700;
     color: #111827;
@@ -98,7 +98,7 @@
     gap: 0.75rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem; /* Add padding at the bottom */
-    border-bottom: 1px solid #e5e7eb; /* Add line between items */
+    border-bottom: 1px solid #1c102933; /* Add line between items */
     font-weight: 600; /* Make text bold */
 
     &:last-child {

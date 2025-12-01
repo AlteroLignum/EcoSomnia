@@ -14,13 +14,12 @@ const WhatWeDo = () => {
                 <Image
                   src={item.imagePath}
                   alt={item.title}
-                  width={246}
-                  height={390}
+                  fill
+                  style={{ objectFit: 'cover' }}
                   className="what-we-do__image"
                 />
                 <div className="what-we-do__image-overlay">
                   <h3 className="what-we-do__card-title">{item.title}</h3>
-                  <p className="what-we-do__card-description">{item.description}</p>
                 </div>
               </div>
             </div>

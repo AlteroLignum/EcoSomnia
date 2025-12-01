@@ -6,7 +6,7 @@ const CustomerSupport = () => {
     <section className="customer-support">
       <div className="customer-support__container">
         <div className="customer-support__content">
-          <h2 className="customer-support__title">Поддержка клиентов, такой как должна быть</h2>
+          <h2 className="customer-support__title">Поддержка клиентов, такой как она должна быть</h2>
           <p className="customer-support__text">
             Мы предоставляем круглосуточную поддержку, доступную более чем на 15 языках, с нашим AI-чат-ботом, который может ответить на самые распространенные вопросы, и живой командой экспертов, готовых помочь с более сложными вопросами.
           </p>

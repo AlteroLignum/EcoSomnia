@@ -1,8 +1,8 @@
 .testimonials {
   padding: 5rem 2rem 4rem;
-  background-color: #1e293b; // Dark blue background
+  background-color: #1e293b;
   position: relative;
-  border-radius: 2rem 2rem 0 0; // Rounded top corners
+  border-radius: 2rem; 
 
   &__container {
     max-width: 1400px;
@@ -10,7 +10,7 @@
   }
 
   &__title {
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
     font-weight: 700;
     color: white;
@@ -20,7 +20,7 @@
 
   &__tabs {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1.5rem;
     margin-bottom: 3rem;
     flex-wrap: wrap;
@@ -57,13 +57,17 @@
   &__card {
     background: #334155;
     border-radius: 0.75rem;
-    padding: 2rem;
+    padding: 24px;
     color: white;
+    gap: 18px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
   }
 
   &__avatar {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-bottom: 1.5rem;
     overflow: hidden;
@@ -104,9 +108,11 @@
 }
 
 // Responsive design
+
+
 @media (max-width: 1024px) {
   .testimonials {
-    padding: 4rem 1rem 3rem;
+    padding: 48px 24px 32px;
 
     &__grid {
       grid-template-columns: repeat(2, 1fr);
@@ -148,7 +154,7 @@
 
     &__tabs {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
 
     &__tab {

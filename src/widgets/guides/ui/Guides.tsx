@@ -22,7 +22,7 @@ const Guides = () => {
   return (
     <section className="guides">
       <div className="guides__container">
-        <h2 className="guides__title">Узнайте больше с EcoSomnia</h2>
+        <h2 className="guides__title">Узнайте больше про возможность увеличения дохода на вашем курорте</h2>
         <div className="guides__cards">
           {guides.map((guide, index) => (
             <div key={index} className="guides__card">

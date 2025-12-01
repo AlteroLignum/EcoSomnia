@@ -1,4 +1,4 @@
-// Data for the "What We Do" section
+
 export interface WhatWeDoItem {
   id: number;
   title: string;
@@ -15,7 +15,7 @@ export const whatWeDoData: WhatWeDoItem[] = [
   },
   {
     id: 2,
-    title: 'Группы и сети',
+    title: 'Группы и компании',
     description: 'Управление сетями отелей',
     imagePath: '/images/whatwedo/Groups and chains.webp',
   },

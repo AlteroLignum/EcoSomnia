@@ -7,7 +7,6 @@ import Image from 'next/image';
 const Testimonials = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  // Group testimonials by type (we'll create 4 categories)
   const testimonialTabs = [
     { name: 'Отельеры', testimonials: testimonialsData.slice(0, 6) },
     { name: 'Сети отелей', testimonials: testimonialsData.slice(6, 12) },
@@ -20,7 +19,7 @@ const Testimonials = () => {
   return (
     <section className="testimonials">
       <div className="testimonials__container">
-        <h2 className="testimonials__title">Лучшие бизнесы работают на EcoSomnia</h2>
+        <h2 className="testimonials__title">Партнеры EcoSomnia</h2>
         <div className="testimonials__tabs">
           {testimonialTabs.map((tab, index) => (
             <button
@@ -44,11 +43,14 @@ const Testimonials = () => {
                   className="testimonials__avatar-img"
                 />
               </div>
-              <p className="testimonials__quote">"{testimonial.text}"</p>
-              <div className="testimonials__author">
-                <span className="testimonials__author-name">{testimonial.name}</span>
-                <span className="testimonials__author-title">{testimonial.position}, {testimonial.company}</span>
+              <div>
+                <p className="testimonials__quote">"{testimonial.text}"</p>
+                <div className="testimonials__author">
+                  <span className="testimonials__author-name">{testimonial.name}</span>
+                  <span className="testimonials__author-title">{testimonial.position}, {testimonial.company}</span>
+                </div>
               </div>
+              
             </div>
           ))}
         </div>

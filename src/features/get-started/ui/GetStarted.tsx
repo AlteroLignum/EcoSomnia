@@ -1,21 +1,22 @@
 import './GetStarted.scss';
+import Image from 'next/image';
 
 const GetStarted = () => {
   const steps = [
     {
       number: '01',
       title: 'Запланируйте 30-минутный звонок',
-      description: 'Поговорите с одним из наших экспертов, чтобы определить, как EcoSomnia может помочь вашему бизнесу.'
+      description: 'и поговорите с одним из наших экспертов, чтобы определить, как EcoSomnia может помочь вашему бизнесу.'
     },
     {
       number: '02',
-      title: 'Получите персональную демонстрацию',
+      title: 'Получите персональную демонстрацию.',
       description: 'Наша команда покажет возможности EcoSomnia, адаптированные к вашим уникальным требованиям.'
     },
     {
       number: '03',
-      title: 'Экспертное введение в систему',
-      description: 'Наша команда по внедрению поможет вам настроить и запустить систему за 30 дней.'
+      title: 'Экспертное введение в систему.',
+      description: 'Наша команда по внедрению поможет настроить и запустить систему за 30 дней.'
     }
   ];
 
@@ -23,8 +24,15 @@ const GetStarted = () => {
     <section className="get-started">
       <div className="get-started__container">
         <div className="get-started__image">
-          {/* Placeholder for tablet image */}
-          <div className="get-started__tablet">Таблица с приложением отеля</div>
+          <Image
+            src="/images/getstarted/book a demo.webp"
+            alt="Get Started with EcoSomnia"
+            
+            width={300}
+            height={300}
+            style={{ objectFit: 'contain' }}
+            className="get-started__tablet-image"
+          />
         </div>
         <div className="get-started__content">
           <h2 className="get-started__title">Начните работу за три простых шага</h2>
@@ -32,8 +40,7 @@ const GetStarted = () => {
             {steps.map((step, index) => (
               <div key={index} className="get-started__step">
                 <div className="get-started__step-number">{step.number}</div>
-                <h3 className="get-started__step-title">{step.title}</h3>
-                <p className="get-started__step-description">{step.description}</p>
+                <p className="get-started__step-title"><strong>{step.title}</strong> {step.description}</p>
               </div>
             ))}
           </div>

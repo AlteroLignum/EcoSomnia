@@ -86,10 +86,14 @@
   }
 }
 
-// Responsive design
+
 @media (max-width: 1024px) {
   .hero {
     padding: 8rem 2rem 4rem;
+
+    &__main-section {
+      flex-direction: column;
+    }
 
     &__container {
       gap: 2rem;
@@ -107,16 +111,14 @@
 
     &__container {
       flex-direction: column;
-      text-align: center;
+      text-align: left;
     }
 
     &__content {
       padding-right: 0;
-      order: 2;
     }
 
     &__image-container {
-      order: 1;
       margin-bottom: 2rem;
     }
 
